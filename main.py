@@ -55,8 +55,8 @@ gr = Group('PD1')  # Створює екземпляр групи
 
 # Додавання студентів до групи та обробка винятку:
 try:
-    gr.add_student(st1)  # Додаєм першого студента до групи
-    gr.add_student(st2)  # Додаєм другого студента до групи
+    gr.add_student(st1)  # Додаємо першого студента до групи
+    gr.add_student(st2)  # Додаємо другого студента до групи
     # Додавання клонів студентів Jobs і Taylor:
     gr.add_student(Student('Male', 31, 'Steve', 'Jobs-Clon1', 'AN146'))  # Додаєм клона Jobs
     gr.add_student(Student('Female', 26, 'Liza', 'Taylor-Clon1', 'AN147'))  # Додаєм клона Taylor
@@ -69,6 +69,6 @@ try:
     # Спроба додати 11-го студента для тестування винятку:
     gr.add_student(Student('Male', 35, 'Steve', 'Jobs-Clon5', 'AN154'))  # Додаєм клона Jobs, що має викликати виняток
 except GroupFullException as e:
-    print(e)  # Виводить повідомлення про виняток
+    print(e)  # Виводимо повідомлення про виняток
 
-print(gr)  # Виводить інформацію про групу та студентів
+print(gr)  # Виводимо інформацію про групу та студентів
