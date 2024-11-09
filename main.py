@@ -48,17 +48,16 @@ class Group:
         all_students = ''.join(str(student) + '\n' for student in self.group)
         return f'Group Number: {self.number}\n{all_students}'  # Повертає номер групи та список студентів
 
-# Створення студентів та групи
+# Створення студентів та групи:
 st1 = Student('Male', 30, 'Steve', 'Jobs', 'AN142')  # Створює екземпляр студента
 st2 = Student('Female', 25, 'Liza', 'Taylor', 'AN145')  # Створює ще одного екземпляра студента
 gr = Group('PD1')  # Створює екземпляр групи
 
-# Додавання студентів до групи та обробка винятку
+# Додавання студентів до групи та обробка винятку:
 try:
     gr.add_student(st1)  # Додаєм першого студента до групи
     gr.add_student(st2)  # Додаєм другого студента до групи
-
-    # Додавання клонів студентів Jobs і Taylor з унікальними ідентифікаторами
+    # Додавання клонів студентів Jobs і Taylor:
     gr.add_student(Student('Male', 31, 'Steve', 'Jobs-Clon1', 'AN146'))  # Додаєм клона Jobs
     gr.add_student(Student('Female', 26, 'Liza', 'Taylor-Clon1', 'AN147'))  # Додаєм клона Taylor
     gr.add_student(Student('Male', 32, 'Steve', 'Jobs-Clon2', 'AN148'))  # Додаєм клона Jobs
@@ -67,8 +66,7 @@ try:
     gr.add_student(Student('Female', 28, 'Liza', 'Taylor-Clon3', 'AN151'))  # Додаєм клона Taylor
     gr.add_student(Student('Male', 34, 'Steve', 'Jobs-Clon4', 'AN152'))  # Додаєм клона Jobs
     gr.add_student(Student('Female', 29, 'Liza', 'Taylor-Clon4', 'AN153'))  # Додаєм клона Taylor
-
-    # Спроба додати 11-го студента для тестування винятку
+    # Спроба додати 11-го студента для тестування винятку:
     gr.add_student(Student('Male', 35, 'Steve', 'Jobs-Clon5', 'AN154'))  # Додаєм клона Jobs, що має викликати виняток
 except GroupFullException as e:
     print(e)  # Виводить повідомлення про виняток
